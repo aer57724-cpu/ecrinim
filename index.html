@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecrin ❤️ Eyüp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#fff;
+    }
+    .box{
+      background: rgba(255,255,255,0.15);
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      max-width:350px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+    input{
+      padding:12px;
+      width:80%;
+      border:none;
+      border-radius:10px;
+      font-size:16px;
+      text-align:center;
+      margin-top:10px;
+    }
+    button{
+      margin-top:15px;
+      padding:12px 25px;
+      border:none;
+      border-radius:20px;
+      background:#fff;
+      color:#ff5f8a;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    .hidden{ display:none; }
+  </style>
+</head>
+<body>
+
+<div class="box" id="login">
+  <h2>🔒 Gizli Sayfa</h2>
+  <input type="password" id="pass" placeholder="Şifre">
+  <br>
+  <button onclick="check()">Giriş</button>
+</div>
+
+<div class="box hidden" id="content">
+  <h1>Ecrin ❤️ Eyüp</h1>
+  <p>Hayatımdaki tek ışık sensin ✨</p>
+  <p>Tanışma Tarihimiz: <b>04.01.2026</b></p>
+</div>
+
+<script>
+  function check(){
+    if(document.getElementById("pass").value==="MAKARNA"){
+      document.getElementById("login").classList.add("hidden");
+      document.getElementById("content").classList.remove("hidden");
+    }else{
+      alert("Yanlış şifre");
+    }
+  }
+</script>
+
+</body>
+</html>
